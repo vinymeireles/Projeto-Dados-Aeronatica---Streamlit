@@ -6,6 +6,10 @@ import pydeck as pdk
 #WideScreen a aplicação
 st.set_page_config(page_title="App Análise de Acidentes Aeronáuticos", page_icon= "🛩", layout="wide")
 
+# Style
+with open('style.css')as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html = True)
+    
 #Load in preparation data
 DATA_URL = "ocorrencias_aviacao.csv"
 
